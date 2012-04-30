@@ -24,6 +24,7 @@ body{
 .hero-unit {text-align:center;}
 .hero-unit h2{padding:20px;}
 #wmd-input {width:450px;}
+#wmd-preview {background-color:rgba(255,255,255,0.1);}
 
 /*
 	Styles Coming from PageDown
