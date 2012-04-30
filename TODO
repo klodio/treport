@@ -1,0 +1,5 @@
+implement something like this http://sharepointkunskap.wordpress.com/2011/12/19/format-javascript-date-in-iso-8601/ for older browsers
+make a good json with the actions data
+support templates (which will be easier with a well-made json)
+clean the code.
+remove duplicate entries (optional)

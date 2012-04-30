@@ -1,0 +1,91 @@
+body{
+	background-image:url('../img/bg.jpg');
+	background-position:center top;
+	background-repeat:no-repeat;
+}
+#loggedin { 
+    display: none; 
+}
+
+
+#reportButtons {
+    width:400px;
+    margin:0 auto;
+    text-align:center;
+}
+.reportButton {
+    font-size:2em;
+    width:100px;
+    height:100px;
+}
+
+#disconnect{float:right}
+.report{display:none}
+.hero-unit {text-align:center;}
+.hero-unit h2{padding:20px;}
+#wmd-input {width:450px;}
+
+/*
+	Styles Coming from PageDown
+*/
+.wmd-panel
+{
+	margin-left: 25%;
+	margin-right: 25%;
+	width: 50%;
+	min-width: 500px;
+}
+
+.wmd-button-bar 
+{
+	width: 100%;
+	background-color: Silver; 
+}
+
+.wmd-button-row 
+{
+	position: relative; 
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+	padding: 0px;  
+	height: 20px;
+}
+
+.wmd-spacer
+{
+	width: 1px; 
+	height: 20px; 
+	margin-left: 14px;
+	position: absolute;
+	background-color: Silver;
+	display: inline-block; 
+	list-style: none;
+}
+
+.wmd-button {
+    width: 20px;
+    height: 20px;
+    padding-left: 2px;
+    padding-right: 3px;
+    position: absolute;
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+}
+
+.wmd-button > span {
+    background-image: url(../img/wmd-buttons.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.wmd-spacer1{left: 50px;}
+.wmd-spacer2{left: 175px;}
+.wmd-spacer3{left: 300px;}
+
+
