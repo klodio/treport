@@ -1,0 +1,7 @@
+# Treport: Trello Report Generator
+
+Don't spend countless minutes writing reports for people you work for. Treport will take care of this.
+
+Just visit http://klodio.github.com/treport , and follow the instructions.
+
+It's still a work in progress, so please don't expect something 100% perfect :).
