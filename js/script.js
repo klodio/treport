@@ -121,7 +121,7 @@ var getStartDate=function(time){
     startDate.setUTCHours(0);
     startDate.setMinutes(0);
     startDate.setSeconds(0);
-    startDate.setDate(22);
+    //startDate.setDate(22); #for testing purposes
     return startDate.toISOString();    
 };
 
