@@ -1,4 +1,4 @@
-/* 
+/*
 A big part of the code comes from an example provided by Trello.
 */
 
@@ -15,7 +15,7 @@ var converter=new Markdown.Converter();
 Trello.authorize({interactive:false,success: onAuthorize});
 
 $(function(){
-	bindEvents();
+    bindEvents();
 });
 
 /*
@@ -26,13 +26,13 @@ $(function(){
 var bindEvents=function(){
 	$(".reportButton").click(function(e){
 		var startDate=getStartDate(this.value);
-		
+
 		getFormattedActions(startDate,function(actionList){
 			$("#wmd-input").text(renderActions(actionList));
 			editor.refreshPreview();
-			$(".report").show();        
+			$(".report").show();
 		});
-		
+
 	});
 
 	//Uses the Trello API authorize method to connect
@@ -42,15 +42,15 @@ var bindEvents=function(){
 			success: onAuthorize
 		})
 	});
-		
+
 	//... Disconnects!
 	$("#disconnect").click(logout);
 };
-	
+
 
 
 /*
-    Under the hood    
+    Under the hood
 */
 
 
@@ -63,11 +63,11 @@ var groupActions=function(actions){
                 cardName=action.data.card.name,
                 boardName=action.data.board.name;
             if (!list[boardName]){
-                list[boardName]={};                
+                list[boardName]={};
             }
             if (!list[boardName][listName]){
-                list[boardName][listName]=[];                
-            }       
+                list[boardName][listName]=[];
+            }
             list[boardName][listName].push(cardName);
         }
     });
@@ -112,7 +112,7 @@ var getFormattedActions=function(time,callback){
 };
 
 
-//Prepares a date String to be used as value of the "since" parameter in the API call 
+//Prepares a date String to be used as value of the "since" parameter in the API call
 var getStartDate=function(time){
     var startDate=new Date();
     if (time=="Weekly"){
@@ -122,7 +122,7 @@ var getStartDate=function(time){
     startDate.setMinutes(0);
     startDate.setSeconds(0);
     //startDate.setDate(22); #for testing purposes
-    return startDate.toISOString();    
+    return startDate.toISOString();
 };
 
 //callback from the connection event
@@ -142,18 +142,20 @@ The functions after this comment were in the original Trello API example
 
 var updateFullName=function(){
     Trello.members.get("me", function(member){
-        $("#fullName").text(member.fullName); 
+        $("#fullName").text(member.fullName);
     });
 };
 
 var updateLoggedIn = function() {
     var isLoggedIn = Trello.authorized();
     $("#loggedout").toggle(!isLoggedIn);
-    $("#loggedin").toggle(isLoggedIn);        
+    $("#loggedin").toggle(isLoggedIn);
+    $("#disconnect").show();
 };
-    
+
 var logout = function() {
     Trello.deauthorize();
+    $("#disconnect").hide();
     updateLoggedIn();
 };
 
